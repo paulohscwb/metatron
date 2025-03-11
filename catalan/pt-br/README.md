@@ -79,7 +79,7 @@ Este trabalho mostra poliedros de Catalan inscritos ou circunscritos no símbolo
 <hr>
 <h4>7. Hexaedro tetrakis</h4>
 <a href="../vr/Metatron_TetrakisHexahedron.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/68A.png" class="foto" alt="Metatron - Hexaedro tetrakis"></a><img src="../ar/68.png" class="qr">
- <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um hexaedro tetrakis pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um hexaedro tetrakis pode ser circunscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
 <hr>

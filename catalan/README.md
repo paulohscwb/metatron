@@ -79,7 +79,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
  <hr>
 <h4>7. Tetrakis hexahedron</h4>
 <a href="vr/Metatron_TetrakisHexahedron.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/68A.png" class="foto" alt="Metatron - Tetrakis Hexahedron"></a><img src="ar/68.png" class="qr">
- <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A tetrakis hexahedron can be inscribed in Metatron's cube symbol.
+ <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A tetrakis hexahedron can be circumscribed in Metatron's cube symbol.
  <br><br>
   <a href="ra.html" class="raAR" title="Augmented reality" target="_blank"></a>
  <hr>
