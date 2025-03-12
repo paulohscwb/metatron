@@ -40,7 +40,7 @@ Este trabalho mostra poliedros de Catalan inscritos ou circunscritos no símbolo
 <p align="center"><img style="border-radius:7px;" alt="Realidade Aumentada do símbolo Cubo de Metatron" src="../ar/example.png" width="85%"></p>
 <hr>
 <h3 id="m3d" align="center">Modelos 3D</h3>
-<!--<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxUnQp7BMJS5m8ATRTtQvhIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<!--<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxVPJITr-G8ErteKw8a-iN7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
 <h4>1. Hexecontaedro deltoidal</h4>
 <a href="../vr/Metatron_DeltoidalHexecontahedron.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/62A.png" class="foto" alt="Metatron - Hexecontaedro Deltoidal"></a><img src="../ar/62.png" class="qr">
  <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um hexecontaedro deltoidal pode ser inscrito no símbolo Cubo de Metatron.
