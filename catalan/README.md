@@ -40,7 +40,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
 <p align="center"><img style="border-radius:7px;" alt="Augmented Reality to Metatron's cube" src="ar/example.png" width="85%"></p>
 <hr>
 <h3 id="m3d" align="center">3D models</h3>
-<!--<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxVPJITr-G8ErteKw8a-iN7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxVPJITr-G8ErteKw8a-iN7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <h4>1. Deltoidal hexecontahedron</h4>
 <a href="vr/Metatron_DeltoidalHexecontahedron.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/62A.png" class="foto" alt="Metatron - Deltoidal Hexecontahedron"></a><img src="ar/62.png" class="qr">
  <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A deltoidal hexecontahedron can be inscribed in Metatron's cube symbol.
