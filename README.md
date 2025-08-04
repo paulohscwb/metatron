@@ -11,8 +11,8 @@
 <br>This work shows polyhedra inscribed or circumscribed in the Metatron's Cube symbol modeled in 3D, with views that can be accessed with Augmented Reality resources and also in immersive Virtual Reality rooms.
 <hr>
 <h3 style="margin-top:3px"><a target="_blank" href="catalan/"><img src="catalan/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Catalan polyhedra</a></h3>
-<!--<h3 style="margin-top:3px"><a target="_blank" href="archimedes/"><img src="archimedes/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Archimedean polyhedra</a></h3>
-<h3 style="margin-top:3px"><a target="_blank" href="biscribed/"><img src="biscribed/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Biscribed polyhedra</a></h3>
+<h3 style="margin-top:3px"><a target="_blank" href="archimedes/"><img src="archimedes/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Archimedean polyhedra</a></h3>
+<!--<h3 style="margin-top:3px"><a target="_blank" href="biscribed/"><img src="biscribed/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Biscribed polyhedra</a></h3>
 <h3 style="margin-top:3px"><a target="_blank" href="joined/"><img src="joined/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Archimedean and Catalan convex hulls</a></h3>
 <h3 style="margin-top:3px"><a target="_blank" href="nonconvex/"><img src="nonconvex/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Nonconvex polyhedra 1</a></h3>
 <h3 style="margin-top:3px"><a target="_blank" href="nonconvex2/"><img src="nonconvex/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Nonconvex polyhedra 2</a></h3>

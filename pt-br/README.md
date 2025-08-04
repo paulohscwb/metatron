@@ -11,8 +11,8 @@
 <br>Este trabalho mostra alguns poliedros inscritos ou circunscritos no símbolo do Cubo do Metatron modelados em 2D e 3D, com as visualizações que podem ser acessadas com os recursos de Realidade Aumentada e também em salas imersivas de Realidade Virtual.
 <hr>
 <h3 style="margin-top:3px"><a target="_blank" href="../catalan/pt-br/"><img src="../catalan/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros de Catalan</a></h3>
-<!--<h3 style="margin-top:3px"><a target="_blank" href="../archimedes/pt-br/"><img src="../archimedes/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros de Arquimedes</a></h3>
-<h3 style="margin-top:3px"><a target="_blank" href="../biscribed/pt-br/"><img src="../biscribed/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros biscritos</a></h3>
+<h3 style="margin-top:3px"><a target="_blank" href="../archimedes/pt-br/"><img src="../archimedes/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros de Arquimedes</a></h3>
+<!--<h3 style="margin-top:3px"><a target="_blank" href="../biscribed/pt-br/"><img src="../biscribed/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros biscritos</a></h3>
 <h3 style="margin-top:3px"><a target="_blank" href="../joined/pt-br/"><img src="../joined/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Cascos convexos de Arquimedes e de Catalan</a></h3>
 <h3 style="margin-top:3px"><a target="_blank" href="../nonconvex/pt-br/"><img src="../nonconvex/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros não convexos 1</a></h3>
 <h3 style="margin-top:3px"><a target="_blank" href="../nonconvex/pt-br/"><img src="../nonconvex/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros não convexos 2</a></h3>

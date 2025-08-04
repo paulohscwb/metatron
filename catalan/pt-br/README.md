@@ -9,8 +9,8 @@
 	<select id="url" onchange="urlHandler(this.value)" style="color:royalblue;">
 		<option disabled selected>Mais símbolos:</option>
 		<option disabled value="../../catalan/pt-br/">Poliedros de Catalan</option>
-		<!--<option value="../../archimedes/pt-br/">Poliedros de Arquimedes</option>
-		<option value="../../biscribed/pt-br/">Poliedros biscritos</option>
+		<option value="../../archimedes/pt-br/">Poliedros de Arquimedes</option>
+		<!--<option value="../../biscribed/pt-br/">Poliedros biscritos</option>
 		<option value="../../joined/pt-br/">Cascos convexos de Arquimedes e de Catalan</option>
 		<option value="../../nonconvex/pt-br/">Poliedros não convexos 1</option>
 		<option value="../../nonconvex2/pt-br/">Poliedros não convexos 2</option>
@@ -27,7 +27,7 @@ function urlHandler(value) {
 <p id="p1"></p>
   <h2 align="center"><img src="../vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="45"> Cubo de Metatron e os poliedros de Catalan</h2>
   O Cubo de Metatron é uma estrutura complexa da Geometria Sagrada, derivada da estrutura da Flor da Vida. Seu nome é uma homenagem ao Arcanjo Metatron. O símbolo Metatron aparece na tradição judaica, no islamismo e na tradição cristã. Este símbolo é considerado responsável por toda a criação e é considerado um Arcanjo, bem como um juiz.
-Este trabalho mostra poliedros de Catalan inscritos ou circunscritos no símbolo Cubo de Metatron, com as visualizações que podem ser acessadas com os recursos de Realidade Aumentada e também em salas imersivas de Realidade Virtual.
+<br>Este trabalho mostra poliedros de Catalan inscritos ou circunscritos no símbolo Cubo de Metatron, com as visualizações que podem ser acessadas com os recursos de Realidade Aumentada e também em salas imersivas de Realidade Virtual.
  <p align="center"><a href="#ra">Realidade Aumentada</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="#m3d">Modelos 3D</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="../../pt-br/">Página Inicial</a></p>
 <hr>
  <h3 align="center">Sala imersiva</h3>
