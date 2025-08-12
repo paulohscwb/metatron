@@ -20,7 +20,7 @@
 <h3 style="margin-top:3px"><a target="_blank" href="toroids/"><img src="toroids/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Polyhedral toroids</a></h3>-->
 <hr>
 <h3 align="center">Immersive rooms</h3>
-<p align="center"><img src="catalan/vr/salas/videos/catalan.gif" style="max-width: 47%; border-radius:5px; margin-right:10px" loading="lazy"/><img src="catalan/vr/salas/videos/catalan.gif" style="max-width: 47%; border-radius:5px;" loading="lazy"/></p>
+<p align="center"><img src="catalan/vr/salas/videos/catalan.gif" style="max-width: 47%; border-radius:5px; margin-right:10px" loading="lazy"/><img src="archimedes/vr/salas/videos/archimedes.gif" style="max-width: 47%; border-radius:5px;" loading="lazy"/></p>
 <h3 align="center">Augmented Reality and 3D models</h3>
 <p align="center"><img src="catalan/ar/example.png" style="max-width: 92%; border-radius:5px;" loading="lazy"/></p>
 <hr>
