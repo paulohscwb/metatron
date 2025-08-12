@@ -79,7 +79,7 @@ function urlHandler(value) {
 <hr>
 <h4>7. Dodecaedro Truncado</h4>
 <a href="../vr/TruncatedDodecahedron.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/56A.png" class="foto" alt="Metatron - Dodecaedro Truncado"></a><img src="../ar/56.png" class="qr">
- <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um dodecaedro truncado pode ser circunscrito no símbolo Cubo de Metatron.
+ <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um dodecaedro truncado pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
 <hr>
