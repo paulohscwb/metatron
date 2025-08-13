@@ -19,7 +19,7 @@ Pm/map_Pm 0.5
 d 0.97
 
 newmtl Cor3
-Kd 0.97.0 0.4 0.1
+Kd 0.97 0.4 0.1
 Ks 0.3 0.3 0.3
 Ni 1
 illum 4
@@ -117,18 +117,18 @@ Pr/map_Pr 0.4
 Pm/map_Pm 0.5
 d 0.97
 
-newmtl Cor13a
-Kd 0.75 0.75 0.75
+newmtl Cor14
+Kd 0.91 0.88 0.15
 Ks 0.3 0.3 0.3
+Ni 1
+illum 4
 Pr/map_Pr 0.4
 Pm/map_Pm 0.5
 d 0.97
 
-newmtl Cor14
-Kd 0 0 0
+newmtl Cor13a
+Kd 0.75 0.75 0.75
 Ks 0.3 0.3 0.3
-Ni 1
-illum 4
 Pr/map_Pr 0.4
 Pm/map_Pm 0.5
 d 0.97
