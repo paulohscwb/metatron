@@ -64,7 +64,7 @@ Pm/map_Pm 0.5
 d 0.97
 
 newmtl Cor13
-Kd 0.85 0.15 0.91
+Kd 0.92 0.15 0.9
 Ks 0.3 0.3 0.3
 Ni 1
 illum 4
