@@ -38,17 +38,18 @@
 			<a-asset-item id="aq4" src="https://paulohscwb.github.io/metatron/imagens/obj/flor1c.obj"></a-asset-item>
 			<a-mixin id="fc3" shadow obj-model="obj: #aq3; mtl: #mt"></a-mixin>
 			<a-mixin id="fc4" shadow obj-model="obj: #aq4; mtl: #mt"></a-mixin>
+			<a-mixin id="piso"></a-mixin>
 		</a-assets>
 		
 		<a-entity camera="fov:80; near:0.01;" orbit-controls="target: 0 1 0; maxPolarAngle: 360; minDistance: 0.5; initialPosition: 0 1 5; maxDistance: 1500;"></a-entity>
-		<a-entity id="cameraRig" position="0 2 5">
-			<a-entity camera="fov:80; near:0.01;" id="head"></a-entity>
+		<a-entity id="cameraRig">
+			<a-entity camera="fov:80; near:0.01;" position="0 2 5" id="head"></a-entity>
 			<a-entity teleport-controls="cameraRig: #cameraRig; collisionEntities: [mixin='piso']; teleportOrigin: #head; button: grip;" hand-controls="hand: right"></a-entity>
 		</a-entity>
 
 		<!--<a-light type="point" color="yellow" intensity="1" position="0 0 0"></a-light>-->
 		
-		<a-plane rotation="-90 0 0" position="0 -1 0" shadow color="black" scale="15 20 0"></a-plane>
+		<a-plane mixin="piso" rotation="-90 0 0" position="0 -1 0" shadow color="black" scale="15 20 0"></a-plane>
 		<a-entity rotation="0 0 0" position="-3.5 1 0" scale="2 2 2">
 			<a-entity>
 				<a-entity id="f1" position="0 -1 0" mixin="anima1">

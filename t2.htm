@@ -52,16 +52,17 @@
 			<a-mixin id="ar5" position="0 0 0.001" shadow obj-model="obj: #aq5l; mtl: #mt"></a-mixin>
 			<a-mixin id="fc6" shadow obj-model="obj: #aq6; mtl: #mt"></a-mixin>
 			<a-mixin id="ar6" position="0 0 0.001" shadow obj-model="obj: #aq6l; mtl: #mt"></a-mixin>
+			<a-mixin id="piso"></a-mixin>
 		</a-assets>
 		
 		<a-entity camera="fov:80; near:0.01;" orbit-controls="target: 0 1 0; maxPolarAngle: 360; minDistance: 0.5; initialPosition: 0 1 2; maxDistance: 1500;"></a-entity>
-		<a-entity id="cameraRig" position="0 2 2">
-			<a-entity camera="fov:80; near:0.01;" id="head"></a-entity>
+		<a-entity id="cameraRig">
+			<a-entity camera="fov:80; near:0.01;" position="0 2 2" id="head"></a-entity>
 			<a-entity teleport-controls="cameraRig: #cameraRig; collisionEntities: [mixin='piso']; teleportOrigin: #head; button: grip;" hand-controls="hand: right"></a-entity>
 		</a-entity>
 		
 		
-		<a-circle rotation="-90 0 0" shadow color="black" radius="6" position="0 -1 0"></a-circle>
+		<a-circle mixin="piso" rotation="-90 0 0" shadow color="black" radius="6" position="0 -1 0"></a-circle>
 		<a-entity scale="2 2 2" position="0 1 0">
 			<a-entity rotation="0 0 0">
 				<a-entity position="0.5 0 -1.866025" mixin="anima3">
