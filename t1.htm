@@ -38,7 +38,9 @@
 			<a-mixin id="fc3" shadow obj-model="obj: #aq3; mtl: #mt"></a-mixin>
 			<a-mixin id="fc4" shadow obj-model="obj: #aq4; mtl: #mt"></a-mixin>
 		</a-assets>
-		<a-entity camera="fov:80; near:0.01;" orbit-controls="target: 0 2 0; maxPolarAngle: 180; minDistance: 0; initialPosition: 0 2 5; maxDistance: 1100;"></a-entity>
+		<a-entity camera="fov:80; near:0.01;" orbit-controls="target: 0 2 0; maxPolarAngle: 360; minDistance: 0; initialPosition: 0 2 5; maxDistance: 1100;"></a-entity>
+		<a-entity camera="fov:80; near:0.01;" position="0 2 5"></a-entity>
+
 		<!--<a-light type="point" color="yellow" intensity="1" position="0 0 0"></a-light>-->
 		
 		<a-plane rotation="-90 0 0" shadow color="black" scale="15 20 0"></a-plane>
