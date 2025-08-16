@@ -1,0 +1,651 @@
+<html>
+  <head>
+    <title>Kirigami</title>
+    <meta charset="utf-8">
+	<link rel="icon" type="image/png" href="salas/imagens/icone.png">
+	<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-orbit-controls@1.3.0/dist/aframe-orbit-controls.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<script src="nomes.js"></script>
+	<link rel="stylesheet" href="nomes.css">
+	<script src="https://fernandojsg.github.io/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"></script>
+  </head>
+  <body>
+<div style='color:#fada91; position: fixed; bottom: 1vh; left:1vw; width:100%; z-index: 1; font-family: Lato; font-size:2.75vh; font-weight:bold; text-shadow:1px 1px 1px royalblue;'>paulohscwb@gmail.com <br> &copy; 2025 Paulo Henrique Siqueira</div>
+    <a-scene shadow="type: pcfsoft" renderer="antialias:true; colorManagement: true; logarithmicDepthBuffer: true;">
+		<a-assets>
+			<a-mixin id="mtl1" shadow material="side: double; color: #b5f; opacity:1; metalness:0.4; roughness:0.4"></a-mixin>
+			<a-mixin id="mtl2" shadow material="side: double; color: #2cf; opacity:1; metalness:0.4; roughness:0.4"></a-mixin>
+			<a-mixin id="mtl3" shadow material="side: double; color: #fa3; opacity:1; metalness:0.4; roughness:0.4"></a-mixin>
+			<a-mixin id="mtl4" shadow material="side: double; color: #cf0; opacity:1; metalness:0.4; roughness:0.4"></a-mixin>
+			<a-mixin id="esfera" visible="false" mixin="mtl4" geometry="radius: 0.05; side:double; segments-width:100; segments-height:100;" material="metalness:0.5; roughness:0.3;"></a-mixin>
+			<a-mixin id="anima1" animation__1="property: rotation; to: 0 45 0; dur: 25000; easing: easeInOutCirc; delay: 5000">
+			<a-mixin id="anima2" animation__1="property: rotation; to: 0 -45 0; dur: 25000; easing: easeInOutCirc; delay: 5000">
+			<a-mixin id="anima1a" animation__1="property: rotation; to: 0 90 0; dur: 25000; easing: easeInOutCirc; delay: 5000">
+			<a-mixin id="anima2a" animation__1="property: rotation; to: 0 -90 0; dur: 25000; easing: easeInOutCirc; delay: 5000">
+			<a-mixin id="anima3" animation__1="property: position; to: 0.5 0 -1.67303; dur: 25000; easing: easeInOutCirc; delay: 5000">
+			<a-mixin id="anima4" animation__1="property: rotation; to: 0 360 0; dur: 60000; easing: easeInOutCirc; delay: 5000; loop: true;">
+			<a-mixin id="anima5" animation__1="property: position; to: 2.8284 0 0; dur: 25000; easing: easeInOutCirc; delay: 5000">
+			<a-mixin id="luz" color="white" intensity="1" light="type: spot; angle: 45; penumbra: 0.5; castShadow:true; shadowBias: -0.01;">
+			<a-asset-item id="mt" src="https://paulohscwb.github.io/metatron/imagens/obj/solidos.mtl"></a-asset-item>
+			<a-asset-item id="mt1" src="https://paulohscwb.github.io/SacredGeometry/symbols/vr/outros/c8.mtl"></a-asset-item>
+			<a-asset-item id="aq1" src="https://paulohscwb.github.io/metatron/imagens/obj/seed1.obj"></a-asset-item>
+			<a-asset-item id="aq1l" src="https://paulohscwb.github.io/metatron/imagens/obj/seed1L.obj"></a-asset-item>
+			<a-asset-item id="aq2" src="https://paulohscwb.github.io/metatron/imagens/obj/seed1a.obj"></a-asset-item>
+			<a-asset-item id="aq2l" src="https://paulohscwb.github.io/metatron/imagens/obj/seed1aL.obj"></a-asset-item>
+			<a-mixin id="fc1" shadow obj-model="obj: #aq1; mtl: #mt"></a-mixin>
+			<a-mixin id="ar1" position="0 0 0.001" shadow obj-model="obj: #aq1l; mtl: #mt"></a-mixin>
+			<a-mixin id="fc2" shadow obj-model="obj: #aq2; mtl: #mt"></a-mixin>
+			<a-mixin id="ar2" position="0 0 0.001" shadow obj-model="obj: #aq2l; mtl: #mt"></a-mixin>
+			<a-asset-item id="aq3" src="https://paulohscwb.github.io/metatron/imagens/obj/seed1b.obj"></a-asset-item>
+			<a-asset-item id="aq3l" src="https://paulohscwb.github.io/metatron/imagens/obj/seed1bL.obj"></a-asset-item>
+			<a-asset-item id="aq4" src="https://paulohscwb.github.io/metatron/imagens/obj/seed1c.obj"></a-asset-item>
+			<a-asset-item id="aq4l" src="https://paulohscwb.github.io/metatron/imagens/obj/seed1cL.obj"></a-asset-item>
+			<a-mixin id="fc3" shadow obj-model="obj: #aq3; mtl: #mt"></a-mixin>
+			<a-mixin id="ar3" position="0 0 0.001" shadow obj-model="obj: #aq3l; mtl: #mt"></a-mixin>
+			<a-mixin id="fc4" shadow obj-model="obj: #aq4; mtl: #mt"></a-mixin>
+			<a-mixin id="ar4" position="0 0 0.001" shadow obj-model="obj: #aq4l; mtl: #mt"></a-mixin>
+		</a-assets>
+		
+		<a-box mixin="piso" class="piso" visible="false" position="0 -1.5 0"></a-box>
+		<a-entity id="cameraRig">
+			<a-entity camera="fov:80; near:0.01;" orbit-controls="target: 0 2 0; maxPolarAngle: 360; minDistance: 0.5; initialPosition: 0 2 2; maxDistance: 1500;"></a-entity>
+			<a-entity teleport-controls="cameraRig: #cameraRig; collisionEntities: [mixin='piso']; teleportOrigin: #head; button: grip;" hand-controls="hand: right"></a-entity>
+		</a-entity>
+		
+		<a-box rotation="-90 0 0" shadow color="black" scale="15 25 0" position="0 -1 -4"></a-box>
+		<a-entity position="0 -0.3 -1" rotation="0 -90 90">
+			<a-entity scale="2 2 2" position="0 2 0">
+				<a-entity rotation="0 0 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 180 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 210 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 240 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 270 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 300 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 330 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+			
+			<a-entity scale="2 2 2" position="0 4.3094010767585 0">
+				<a-entity rotation="0 0 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 180 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 210 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 240 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 270 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 300 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 330 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+			
+			<a-entity scale="2 2 2" position="0 6.618802153517 0">
+				<a-entity rotation="0 0 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 180 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 210 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 240 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 270 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 300 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 330 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+			
+			<a-entity scale="2 2 2" position="0 8.9282032302755 0">
+				<a-entity rotation="0 0 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 180 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 210 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 240 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 270 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 300 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-entity rotation="0 330 0">
+					<a-entity position="0.5 0 -1.866025" mixin="anima3">
+						<a-entity id="f1" position="-0.5 -1 0" mixin="anima1">
+							<a-entity mixin="ar1"></a-entity>
+							<a-entity mixin="fc1"></a-entity>
+							<a-entity id="f3" position="-0.225 0 0" mixin="anima2a">
+								<a-entity mixin="ar3"></a-entity>
+								<a-entity mixin="fc3"></a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity id="f2" position="-0.5 -1 0" mixin="anima2">
+							<a-entity mixin="ar2"></a-entity>
+							<a-entity mixin="fc2"></a-entity>
+							<a-entity id="f4" position="0.225 0 0" mixin="anima1a">
+								<a-entity mixin="ar4"></a-entity>
+								<a-entity mixin="fc4"></a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+			
+			<a-light type="ambient" color="white" intensity="0.7"></a-light>
+			<a-entity mixin="anima4">
+				<a-light mixin="luz" rotation="0 -90 0" position="-6 2 0"></a-light>
+				<a-light mixin="luz" rotation="0 90 0" position="6 2 0"></a-light>
+				<a-light mixin="luz" rotation="0 -90 0" position="-6 4.5 0"></a-light>
+				<a-light mixin="luz" rotation="0 90 0" position="6 4.5 0"></a-light>
+				<!--<a-light mixin="luz" rotation="0 -135 0" position="-6 0 -6"></a-light>
+				<a-light mixin="luz" rotation="0 45 0" position="6 0 6"></a-light>
+				<a-light mixin="luz" rotation="0 -45 0" position="-6 0 6"></a-light>
+				<a-light mixin="luz" rotation="0 135 0" position="6 0 -6"></a-light>-->
+			</a-entity>
+			</a-entity>
+		<a-sky color="black" radius="25"></a-sky><a-sky src="https://paulohscwb.github.io/SacredGeometry/imagens/8k_stars_milky_way.jpg" radius="18"></a-sky>
+    </a-scene>
+	<div class="box">
+		<span class="titulo">Kirigami - Flower of life</span>
+		<br><span class="titulo"></span>
+		<hr><input type="checkbox" id="faces" checked onclick="mfaces()">faces&nbsp;&nbsp;&nbsp; 
+		<input type="checkbox" id="arestas1" checked onclick="marestas()">edges
+	</div>
+  </body>
+</html>
