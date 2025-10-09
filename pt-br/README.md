@@ -5,10 +5,11 @@
 <b>autor:</b> Paulo Henrique Siqueira - Universidade Federal do Paraná
 <br><b>contato:</b> <a href="#"> paulohscwb@gmail.com </a>
 <br><a href="https://paulohscwb.github.io/metatron/">english version</a>
-<br><br>A Geometria Sagrada é considerada a linguagem do design universal do cosmos. Trata-se de uma ciência antiga que explora e explica os padrões de energia que servem para criar e unificar todas as coisas. 
+<div><img align="right" src="../imagens/qr.png"/>
+<br>A Geometria Sagrada é considerada a linguagem do design universal do cosmos. Trata-se de uma ciência antiga que explora e explica os padrões de energia que servem para criar e unificar todas as coisas. 
 <br>As estruturas matemáticas utilizadas na Geometria Sagrada podem ser encontradas nas artes, arquitetura e até em nosso DNA. Estas estruturas estão em toda parte, e servem de ligação entre o pensamento analítico e o lado intuitivo, ou então entre a ciência e a espiritualidade.
 <br>O Cubo de Metatron é uma estrutura complexa da Geometria Sagrada, derivada da estrutura da Flor da Vida. Seu nome é uma homenagem ao Arcanjo Metatron. O símbolo Metatron aparece na tradição judaica, no islamismo e na tradição cristã. Este símbolo é considerado responsável por toda a criação e é considerado um Arcanjo, bem como um juiz.
-<br>Este trabalho mostra alguns poliedros inscritos ou circunscritos no símbolo do Cubo do Metatron modelados em 2D e 3D, com as visualizações que podem ser acessadas com os recursos de Realidade Aumentada e também em salas imersivas de Realidade Virtual.
+<br>Este trabalho mostra alguns poliedros inscritos ou circunscritos no símbolo do Cubo do Metatron modelados em 2D e 3D, com as visualizações que podem ser acessadas com os recursos de Realidade Aumentada e também em salas imersivas de Realidade Virtual.</div>
 <hr>
 <h3 style="margin-top:3px"><a target="_blank" href="../catalan/pt-br/"><img src="../catalan/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros de Catalan</a></h3>
 <h3 style="margin-top:3px"><a target="_blank" href="../archimedes/pt-br/"><img src="../archimedes/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Poliedros de Arquimedes</a></h3>

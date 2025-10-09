@@ -5,10 +5,11 @@
  <b>author:</b> Paulo Henrique Siqueira - Universidade Federal do Paraná
  <br><b>contact:</b> <a href="#">paulohscwb@gmail.com</a>
  <br><a href="https://paulohscwb.github.io/metatron/pt-br/">versão em português</a>
- <br><br>Sacred Geometry is considered the universal design language of the cosmos. It is an ancient science that explores and explains the energy patterns that serve to create and unify all things.
+ <div><img align="right" src="imagens/qr.png"/>
+ <br>Sacred Geometry is considered the universal design language of the cosmos. It is an ancient science that explores and explains the energy patterns that serve to create and unify all things.
 <br>The mathematical structures used in Sacred Geometry can be found in the arts, architecture and even in our DNA. These structures are everywhere, and serve as a link between analytical thinking and the intuitive side, or between science and spirituality.
 <br>Metatron's Cube is a complex structure of Sacred Geometry, derived from the structure of the Flower of Life. It is named after Archangel Metatron. The Metatron symbol appears in Jewish, Islamic and Christian tradition. This symbol is considered responsible for all creation and is considered an Archangel as well as a judge.
-<br>This work shows polyhedra inscribed or circumscribed in the Metatron's Cube symbol modeled in 3D, with views that can be accessed with Augmented Reality resources and also in immersive Virtual Reality rooms.
+<br>This work shows polyhedra inscribed or circumscribed in the Metatron's Cube symbol modeled in 3D, with views that can be accessed with Augmented Reality resources and also in immersive Virtual Reality rooms.</div>
 <hr>
 <h3 style="margin-top:3px"><a target="_blank" href="catalan/"><img src="catalan/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Catalan polyhedra</a></h3>
 <h3 style="margin-top:3px"><a target="_blank" href="archimedes/"><img src="archimedes/vr/salas/imagens/icone.png" style="margin-bottom:-10px" width="40"> Archimedean polyhedra</a></h3>
