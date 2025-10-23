@@ -40,7 +40,7 @@ function urlHandler(value) {
 <p align="center"><img style="border-radius:7px;" alt="Realidade Aumentada do símbolo Cubo de Metatron" src="../ar/example.png" width="85%"></p>
 <hr>
 <h3 id="m3d" align="center">Modelos 3D</h3>
-<!--<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxXAd5K8VedQr-CtskDLmAtZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxXAd5K8VedQr-CtskDLmAtZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <a href="../vr/Cuboctahedron.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/50A.png" class="foto" alt="Metatron - Cuboctaedro"></a><img src="../ar/50.png" class="qr">
  <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um cuboctaedro pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
