@@ -55,7 +55,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
  <a href="ra.html" class="raAR" title="Augmented reality" target="_blank"></a>
 <hr>
 <h4>3. Cube kites</h4>
-<a href="vr/cubo_kites.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/63A.png" class="foto" alt="Metatron - cube kites"></a><img src="ar/63.png" class="qr">
+<a href="vr/cubo_kites.html" target="_blank" title="3D model" class="fotoA"><img src="ar/63A.png" class="foto" alt="Metatron - cube kites"></a><img src="ar/63.png" class="qr">
  <br><br><br>Metatron's Cube is a powerful symbol of Sacred Geometry, as this symbol is believed to contain all the patterns of creation. A cube kites can be inscribed in Metatron's cube symbol.
  <br><br>
  <a href="ra.html" class="raAR" title="Augmented reality" target="_blank"></a>
@@ -73,7 +73,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
   <a href="ra.html" class="raAR" title="Augmented reality" target="_blank"></a>
  <hr>
 <h4>6. Dodecahedron kites</h4>
-<a href="vr/dode_kites.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/66A.png" class="foto" alt="Metatron - Dodecahedron kites"></a><img src="ar/66.png" class="qr">
+<a href="vr/dode_kites.html" target="_blank" title="3D model" class="fotoA"><img src="ar/66A.png" class="foto" alt="Metatron - Dodecahedron kites"></a><img src="ar/66.png" class="qr">
  <br><br><br>Metatron's Cube is a powerful symbol of Sacred Geometry, as this symbol is believed to contain all the patterns of creation. A dodecahedron kites can be inscribed in Metatron's cube symbol.
  <br><br>
  <a href="ra.html" class="raAR" title="Augmented reality" target="_blank"></a>
@@ -189,7 +189,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
  <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
 <hr>
 <h4>25. Hexakis stellated tetrahedron</h4>
-<a href="vr/HexakisTetrahedron1Star.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/85A.png" class="foto" alt="Metatron - Hexakis stellated tetrahedron"></a><img src="ar/85.png" class="qr">
+<a href="vr/HexakisTetrahedron1Star.html" target="_blank" title="3D model" class="fotoA"><img src="ar/85A.png" class="foto" alt="Metatron - Hexakis stellated tetrahedron"></a><img src="ar/85.png" class="qr">
  <br><br><br>Metatron's Cube is considered a geometric variation of the Fruit of Life symbol, which is in turn derived from the Flower of Life symbol. A hexakis stellated tetrahedron can be inscribed in Metatron's cube symbol.
  <br><br>
   <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
@@ -201,7 +201,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
  <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
  <hr>
 <h4>27. Hexakis stellated tetrahedron</h4>
-<a href="vr/HexakisTetrahedron2Star.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/87A.png" class="foto" alt="Metatron - Hexakis stellated tetrahedron"></a><img src="ar/87.png" class="qr">
+<a href="vr/HexakisTetrahedron2Star.html" target="_blank" title="3D model" class="fotoA"><img src="ar/87A.png" class="foto" alt="Metatron - Hexakis stellated tetrahedron"></a><img src="ar/87.png" class="qr">
  <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A hexakis stellated tetrahedron can be circumscribed in Metatron's cube symbol.
  <br><br>
   <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
@@ -226,7 +226,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
  <p class="topop"><a href="#p1" class="topo">back to top</a></p>
 <hr>
 <h4>31. Hexakis stellated tetrahedron</h4>
-<a href="vr/HexakisTetrahedron4Star.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/91A.png" class="foto" alt="Metatron - Hexakis stellated tetrahedron"></a><img src="ar/91.png" class="qr">
+<a href="vr/HexakisTetrahedron4Star.html" target="_blank" title="3D model" class="fotoA"><img src="ar/91A.png" class="foto" alt="Metatron - Hexakis stellated tetrahedron"></a><img src="ar/91.png" class="qr">
  <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A hexakis stellated tetrahedron can be inscribed in Metatron's cube symbol.
  <br><br>
  <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>

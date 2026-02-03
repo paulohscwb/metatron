@@ -55,7 +55,7 @@ function urlHandler(value) {
 <a href="../ra.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
 <hr>
 <h4>3. Cubo de pipas</h4>
-<a href="../vr/cubo_kites.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/63A.png" class="foto" alt="Metatron - Cubo de pipas"></a><img src="../ar/63.png" class="qr">
+<a href="../vr/cubo_kites.html" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/63A.png" class="foto" alt="Metatron - Cubo de pipas"></a><img src="../ar/63.png" class="qr">
  <br><br><br>O Cubo de Metatron é um poderoso símbolo da Geometria Sagrada, pois acredita-se que este símbolo contém todos os padrões da criação. Um cubo de pipas pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
@@ -73,7 +73,7 @@ function urlHandler(value) {
 <a href="../ra.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
 <hr>
 <h4>6. Dodecaedro de pipas</h4>
-<a href="../vr/dode_kites.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/66A.png" class="foto" alt="Metatron - Dodecaedro de pipas"></a><img src="../ar/66.png" class="qr">
+<a href="../vr/dode_kites.html" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/66A.png" class="foto" alt="Metatron - Dodecaedro de pipas"></a><img src="../ar/66.png" class="qr">
  <br><br><br>O Cubo de Metatron é um poderoso símbolo da Geometria Sagrada, pois acredita-se que este símbolo contém todos os padrões da criação. Um dodecaedro de pipas pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
@@ -189,7 +189,7 @@ function urlHandler(value) {
 <a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
 <hr>
 <h4>25. Tetraedro hexakis estrelado</h4>
-<a href="../vr/HexakisTetrahedron1Star.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/85A.png" class="foto" alt="Metatron - Tetraedro hexakis estrelado"></a><img src="../ar/85.png" class="qr">
+<a href="../vr/HexakisTetrahedron1Star.html" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/85A.png" class="foto" alt="Metatron - Tetraedro hexakis estrelado"></a><img src="../ar/85.png" class="qr">
  <br><br><br>O Cubo de Metatron é considerado uma variante geométrica do símbolo do Fruto da Vida que é, por sua vez, derivado do símbolo da Flor da Vida. Um tetraedro hexakis estrelado pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
@@ -201,7 +201,7 @@ function urlHandler(value) {
 <a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
 <hr>
 <h4>27. Tetraedro hexakis estrelado</h4>
-<a href="../vr/HexakisTetrahedron2Star.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/87A.png" class="foto" alt="Metatron - Tetraedro hexakis estrelado"></a><img src="../ar/87.png" class="qr">
+<a href="../vr/HexakisTetrahedron2Star.html" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/87A.png" class="foto" alt="Metatron - Tetraedro hexakis estrelado"></a><img src="../ar/87.png" class="qr">
  <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um tetraedro hexakis estrelado pode ser circunscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
@@ -226,7 +226,7 @@ function urlHandler(value) {
 <p class="topop"><a href="#p1" class="topo">voltar ao topo</a></p>
 <hr>
 <h4>31. Tetraedro hexakis estrelado</h4>
-<a href="../vr/HexakisTetrahedron4Star.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/91A.png" class="foto" alt="Metatron - Tetraedro hexakis estrelado"></a><img src="../ar/91.png" class="qr">
+<a href="../vr/HexakisTetrahedron4Star.html" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/91A.png" class="foto" alt="Metatron - Tetraedro hexakis estrelado"></a><img src="../ar/91.png" class="qr">
  <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um tetraedro hexakis estrelado pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
