@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Metatron's cube</title>
+	<link rel="icon" type="image/png" href="vr/salas/imagens/icone.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/super-hands/dist/super-hands.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras/dist/aframe-physics-extras.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
+	<script src="vr/nomes.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  </head>
+  <body>
+  <div style='color:#fada91; position: fixed; bottom: 1vh; left:1vw; width:100%; z-index: 1; font-family: Lato; font-size:2.75vh; font-weight:bold; text-shadow:1px 1px 1px royalblue;'>paulohscwb@gmail.com <br> &copy; 2026 Paulo Henrique Siqueira</div>
+	<div style='position: fixed; top: 43px; width:100%; text-align: center; z-index: -2;' id="info">
+		<font face="verdana" size="5" color="DarkSlateBlue">Loading...</font>
+	</div>
+	<script>
+		setTimeout(() => {
+		let get = document.getElementById('info');
+			get.style.display = 'none';
+		}, 5000);
+	</script>
+	<div class="box" style="visibility: hidden;">
+		<label for="rangevalue">order: </label><output id="rangevalue">0</output>&nbsp;&nbsp;&nbsp;<input type="range" id="nv" min="0" max="15" step="1" value="0" onchange="rangevalue.value=value; mnivelRA()">
+	</div>
+    <a-scene physics="gravity:-1; iterations:5;" shadow="type: pcfsoft" renderer="antialias: true; colorManagement: true; highRefreshRate: true;"> <!--logarithmicDepthBuffer: true-->
+        <a-assets>
+           <a-mixin id="poli1" shadow hoverable grabbable stretchable draggable droppable dynamic-body="linearDamping:0.05; angularDamping:0.05; mass:5; shape: auto"></a-mixin>
+		   <a-mixin id="botao1" geometry="radius:0.06; height:0.03; phi-length: 180" scale="1 1 0.5" material="opacity: 0.22; color:yellow;" clickable static-body></a-mixin>
+		   <a-mixin id="botao2" geometry="radius:0.06; height:0.03;" material="opacity: 0.3; color:cyan;" clickable static-body></a-mixin>
+           <a-mixin id="piso" geometry="width: 40; height: 0.1; depth: 40;" material="opacity:0.01; color: rgb(100,100,100)" static-body shadow></a-mixin>
+			<a-mixin id="mfisicas" physics-collider collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.018" super-hands="colliderEvent: collisions; colliderEventProperty: els; colliderEndEvent: collisions; colliderEndEventProperty: clearedEls;"></a-mixin>
+			 <a-mixin id="pointer" raycaster="showLine: true; objects: #poli1, .poli, a-torus, a-tetrahedron, a-link, a-sphere, a-cylinder" collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.02" super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent:raycaster-intersection-cleared; colliderEndEventProperty: clearedEls;"></a-mixin>
+			<a-mixin id="controle" mixin="pointer"></a-mixin>
+			<a-mixin id="lnk" rotation="-90 0 0" scale="0.5 0.5 0.5" position="0 0.25 0" link="title: 3D model; highlighted:true; backgroundColor:LightGray"></a-mixin>
+			<a-mixin id="mtl1" material="side: double; color: #b5f; opacity:1; metalness:0.4; roughness:0.2"></a-mixin>
+			<a-mixin id="mtl2" material="side: double; color: #2cf; opacity:0.5; metalness:0.4; roughness:0.2"></a-mixin>
+			<a-mixin id="mtl3" material="side: double; color: #fa3; opacity:0.7; metalness:0.4; roughness:0.2"></a-mixin>
+			<a-mixin id="mtl4" material="side: double; color: #cf0; opacity:0.7; metalness:0.4; roughness:0.2"></a-mixin>
+			<a-mixin id="ci" geometry="height:5.1962; radius:0.031;" mixin="mtl1"></a-mixin>
+			<a-mixin id="esfera" mixin="mtl4" geometry="radius: 0.618; side:double; segments-width:100; segments-height:100;" material="metalness:0.5; roughness:0.3;"></a-mixin>
+			<a-mixin id="s4_1" position="0 0 1.5"></a-mixin>
+			<a-mixin id="s4_2" position="0 -1.5 1.5"></a-mixin>
+			<a-mixin id="s4_3" position="0 1.5 0"></a-mixin>
+			<a-mixin id="arestas" mixin="mtl1" geometry="radius: 0.031; height:3" material="metalness:0.5; roughness:0.3;"></a-mixin>
+			<a-mixin id="diagonal" mixin="mtl1" geometry="radius: 0.031; height:4.243" material="metalness:0.5; roughness:0.3;">
+			<a-asset-item id="mt" src="https://paulohscwb.github.io/polyhedra2/fractalnonconvex/vr/outros/c1.mtl"></a-asset-item>
+			<a-asset-item id="mt1" src="https://paulohscwb.github.io/SacredGeometry/symbols/vr/outros/c8.mtl"></a-asset-item>
+			<a-asset-item id="aq" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/ConcaveDodecahedron.obj"></a-asset-item>
+			<a-asset-item id="aq1" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/ConcaveDodecahedronL.obj"></a-asset-item>
+			<a-mixin id="fc" scale="0.998 0.998 0.998" obj-model="obj: #aq; mtl: #mt"></a-mixin>
+			<a-mixin id="ar" obj-model="obj: #aq1; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq2" src="https://paulohscwb.github.io/polyhedra/selfintersecttruncated/vr/outros/CubitruncatedCuboctahedron.obj"></a-asset-item>
+			<a-asset-item id="aq3" src="https://paulohscwb.github.io/polyhedra/selfintersecttruncated/vr/outros/CubitruncatedCuboctahedronL.obj"></a-asset-item>
+			<a-mixin id="fc1" scale="0.998 0.998 0.998" obj-model="obj: #aq2; mtl: #mt"></a-mixin>
+			<a-mixin id="ar1" obj-model="obj: #aq3; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq4" src="https://paulohscwb.github.io/polyhedra2/fractalnonconvex/vr/outros/cubo_kites.obj"></a-asset-item>
+			<a-asset-item id="aq5" src="https://paulohscwb.github.io/polyhedra2/fractalnonconvex/vr/outros/cubo_kitesL.obj"></a-asset-item>
+			<a-mixin id="fc2" scale="0.998 0.998 0.998" obj-model="obj: #aq4; mtl: #mt"></a-mixin>
+			<a-mixin id="ar2" obj-model="obj: #aq5; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq6" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/Cubohemioctahedron.obj"></a-asset-item>
+			<a-asset-item id="aq7" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/CubohemioctahedronL.obj"></a-asset-item>
+			<a-mixin id="fc3" scale="0.998 0.998 0.998" obj-model="obj: #aq6; mtl: #mt"></a-mixin>
+			<a-mixin id="ar3" obj-model="obj: #aq7; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq8" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/DitrigonalDodecadodecahedron.obj"></a-asset-item>
+			<a-asset-item id="aq9" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/DitrigonalDodecadodecahedronL.obj"></a-asset-item>
+			<a-mixin id="fc4" scale="0.998 0.998 0.998" obj-model="obj: #aq8; mtl: #mt"></a-mixin>
+			<a-mixin id="ar4" obj-model="obj: #aq9; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq10" src="https://paulohscwb.github.io/polyhedra2/fractalnonconvex/vr/outros/dode_kites.obj"></a-asset-item>
+			<a-asset-item id="aq11" src="https://paulohscwb.github.io/polyhedra2/fractalnonconvex/vr/outros/dode_kitesL.obj"></a-asset-item>
+			<a-mixin id="fc5" scale="0.998 0.998 0.998" obj-model="obj: #aq10; mtl: #mt"></a-mixin>
+			<a-mixin id="ar5" obj-model="obj: #aq11; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq12" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/Dodecadodecahedron.obj"></a-asset-item>
+			<a-asset-item id="aq13" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/DodecadodecahedronL.obj"></a-asset-item>
+			<a-mixin id="fc6" scale="0.998 0.998 0.998" obj-model="obj: #aq12; mtl: #mt"></a-mixin>
+			<a-mixin id="ar6" obj-model="obj: #aq13; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq14" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/Escher.obj"></a-asset-item>
+			<a-asset-item id="aq15" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/EscherL.obj"></a-asset-item>
+			<a-mixin id="fc7" scale="0.998 0.998 0.998" obj-model="obj: #aq14; mtl: #mt"></a-mixin>
+			<a-mixin id="ar7" obj-model="obj: #aq15; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq16" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/EscherDual.obj"></a-asset-item>
+			<a-asset-item id="aq17" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/EscherDualL.obj"></a-asset-item>
+			<a-mixin id="fc8" scale="0.998 0.998 0.998" obj-model="obj: #aq16; mtl: #mt"></a-mixin>
+			<a-mixin id="ar8" obj-model="obj: #aq17; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq18" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/GreatCubicuboctahedron.obj"></a-asset-item>
+			<a-asset-item id="aq19" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/GreatCubicuboctahedronL.obj"></a-asset-item>
+			<a-mixin id="fc9" scale="0.998 0.998 0.998" obj-model="obj: #aq18; mtl: #mt"></a-mixin>
+			<a-mixin id="ar9" obj-model="obj: #aq19; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq20" src="https://paulohscwb.github.io/polyhedra/selfintersectsnub/vr/outros/GreatDirhombicosidodecahedron.obj"></a-asset-item>
+			<a-asset-item id="aq21" src="https://paulohscwb.github.io/polyhedra/selfintersectsnub/vr/outros/GreatDirhombicosidodecahedronL.obj"></a-asset-item>
+			<a-mixin id="fc10" scale="0.998 0.998 0.998" obj-model="obj: #aq20; mtl: #mt"></a-mixin>
+			<a-mixin id="ar10" obj-model="obj: #aq21; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq22" src="https://paulohscwb.github.io/polyhedra/selfintersecttruncated/vr/outros/GreatDisdyakisDodecahedron.obj"></a-asset-item>
+			<a-asset-item id="aq23" src="https://paulohscwb.github.io/polyhedra/selfintersecttruncated/vr/outros/GreatDisdyakisDodecahedronL.obj"></a-asset-item>
+			<a-mixin id="fc11" scale="0.998 0.998 0.998" obj-model="obj: #aq22; mtl: #mt"></a-mixin>
+			<a-mixin id="ar11" obj-model="obj: #aq23; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq24" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/GreatDitrigonalDodecicosidodecahedron.obj"></a-asset-item>
+			<a-asset-item id="aq25" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/GreatDitrigonalDodecicosidodecahedronL.obj"></a-asset-item>
+			<a-mixin id="fc12" scale="0.998 0.998 0.998" obj-model="obj: #aq24; mtl: #mt"></a-mixin>
+			<a-mixin id="ar12" obj-model="obj: #aq25; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq26" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/GreatDitrigonalIcosidodecahedron.obj"></a-asset-item>
+			<a-asset-item id="aq27" src="https://paulohscwb.github.io/polyhedra/selfintersect/vr/outros/GreatDitrigonalIcosidodecahedronL.obj"></a-asset-item>
+			<a-mixin id="fc13" scale="0.998 0.998 0.998" obj-model="obj: #aq26; mtl: #mt"></a-mixin>
+			<a-mixin id="ar13" obj-model="obj: #aq27; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq28" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/GreatDodecahedron.obj"></a-asset-item>
+			<a-asset-item id="aq29" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/GreatDodecahedronL.obj"></a-asset-item>
+			<a-mixin id="fc14" scale="0.998 0.998 0.998" obj-model="obj: #aq28; mtl: #mt"></a-mixin>
+			<a-mixin id="ar14" obj-model="obj: #aq29; mtl: #mt1"></a-mixin>
+			<a-asset-item id="aq30" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/GreatDodecahemicosahedron.obj"></a-asset-item>
+			<a-asset-item id="aq31" src="https://paulohscwb.github.io/polyhedra/nonconvex/vr/outros/GreatDodecahemicosahedronL.obj"></a-asset-item>
+			<a-mixin id="fc15" scale="0.998 0.998 0.998" obj-model="obj: #aq30; mtl: #mt"></a-mixin>
+			<a-mixin id="ar15" obj-model="obj: #aq31; mtl: #mt1"></a-mixin>
+			<a-mixin id="texto" position="0 -3.5 3.47" rotation="-20 0 0" text="width:11; side:double; color: #b5f; xOffset:0.03; align:center;"></a-mixin>
+			<a-mixin id="texto1" mixin="texto" rotation="-90 0 0" text="align:left; width: 1.5;"></a-mixin>
+        </a-assets>
+        <a-entity id="cameraRig">
+           <a-camera id="head" look-controls wasd-controls-enabled="false" position="0 1.7 1" cursor="rayOrigin:mouse" static-body="shape: sphere; sphereRadius: 0.001" super-hands="colliderEvent: raycaster-intersection; colliderEventProperty: els; colliderEndEvent:raycaster-intersection-cleared; colliderEndEventProperty: clearedEls;"></a-camera>
+           <a-entity id="lhand" mixin="mfisicas" hand-controls="hand: left"></a-entity>
+		   <a-entity id="rhand" mixin="controle" hand-controls="hand: right"></a-entity>
+        </a-entity>
+        <a-box mixin="piso" class="piso" visible="false" position="0 -0.05 0"></a-box>
+        <a-gltf-model static-body src="../imagens/mesa1_6.glb" position="0 0 0" shadow></a-gltf-model>
+		<a-light type="point" color="yellow" intensity="0.5" position="0 0 0"></a-light>
+		
+		<a-text mixin="texto1" position="0 0.77 -0.95" value="Metatron's cube: Catalan polyhedra"></a-text>
+		<a-text mixin="texto1" position="0.31 0.77 -0.79" value="Choose the polyhedron:"></a-text>
+		<a-text mixin="texto1" position="0.31 0.77 -0.13" value="1"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.37 0.77 -0.13" onclick="nv.value=0; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.45 0.77 -0.13" value="2"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.51 0.77 -0.13" onclick="nv.value=1; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.59 0.77 -0.13" value="3"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.65 0.77 -0.13" onclick="nv.value=2; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.73 0.77 -0.13" value="4"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.79 0.77 -0.13" onclick="nv.value=3; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.87 0.77 -0.13" value="5"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.93 0.77 -0.13" onclick="nv.value=4; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.31 0.77 -0.35" value="6"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.37 0.77 -0.35" onclick="nv.value=5; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.45 0.77 -0.35" value="7"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.51 0.77 -0.35" onclick="nv.value=6; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.59 0.77 -0.35" value="8"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.65 0.77 -0.35" onclick="nv.value=7; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.73 0.77 -0.35" value="9"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.79 0.77 -0.35" onclick="nv.value=8; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.85 0.77 -0.35" value="10"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.93 0.77 -0.35" onclick="nv.value=9; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.16 0.77 -0.57" value="11"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.23 0.77 -0.57" onclick="nv.value=10; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.3 0.77 -0.57" value="12"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.37 0.77 -0.57" onclick="nv.value=11; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.44 0.77 -0.57" value="13"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.51 0.77 -0.57" onclick="nv.value=12; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.58 0.77 -0.57" value="14"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.65 0.77 -0.57" onclick="nv.value=13; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.72 0.77 -0.57" value="15"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.79 0.77 -0.57" onclick="nv.value=14; mnivelRA()"></a-sphere>
+		<a-text mixin="texto1" position="0.85 0.77 -0.57" value="16"></a-text>
+		<a-sphere mixin="botao1" rotation="-90 0 0" class="botao" position="0.93 0.77 -0.57" onclick="nv.value=15; mnivelRA()"></a-sphere>
+		
+		<a-entity position="-0.35 1.22 -0.46" scale="0.12 0.12 0.12" shadow>
+			<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+				<a-entity>
+					<a-cylinder mixin="ci" rotation="54.5 45 0"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="-54.5 45 0"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="54.5 -45 0"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="-54.5 -45 0"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="65.9 26.566 0" position="-0.75 -0.75 0" height="3.66"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="65.9 -26.566 0" position="0.75 -0.75 0" height="3.66"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="65.9 26.566 0" position="0.75 0.75 0" height="3.66"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="65.9 -26.566 0" position="-0.75 0.75 0" height="3.66"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="-65.9 26.566 0" position="0.75 -0.75 0" height="3.66"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="-65.9 26.566 0" position="-0.75 0.75 0" height="3.66"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="-65.9 -26.566 0" position="-0.75 -0.75 0" height="3.66"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="-65.9 -26.566 0" position="0.75 0.75 0" height="3.66"></a-cylinder>
+					<a-entity rotation="0 90 0">
+						<a-cylinder mixin="ci" rotation="65.9 26.566 0" position="-0.75 -0.75 0" height="3.66"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="65.9 -26.566 0" position="0.75 -0.75 0" height="3.66"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="65.9 26.566 0" position="0.75 0.75 0" height="3.66"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="65.9 -26.566 0" position="-0.75 0.75 0" height="3.66"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="-65.9 26.566 0" position="0.75 -0.75 0" height="3.66"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="-65.9 26.566 0" position="-0.75 0.75 0" height="3.66"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="-65.9 -26.566 0" position="-0.75 -0.75 0" height="3.66"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="-65.9 -26.566 0" position="0.75 0.75 0" height="3.66"></a-cylinder>
+					</a-entity>
+					<a-cylinder mixin="ci" rotation="0 0 45" position="0.75 0.75 0" height="2.1213"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="0 0 -45" position="-0.75 0.75 0" height="2.1213"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="45 0 0" position="0 0.75 -0.75" height="2.1213"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="-45 0 0" position="0 0.75 0.75" height="2.1213"></a-cylinder>
+					<a-entity rotation="180 0 0">
+						<a-cylinder mixin="ci" rotation="0 0 45" position="0.75 0.75 0" height="2.1213"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="0 0 -45" position="-0.75 0.75 0" height="2.1213"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="45 0 0" position="0 0.75 -0.75" height="2.1213"></a-cylinder>
+						<a-cylinder mixin="ci" rotation="-45 0 0" position="0 0.75 0.75" height="2.1213"></a-cylinder>
+					</a-entity>
+					<a-cylinder mixin="ci" rotation="0 45 90" position="0.75 0 0.75" height="2.1213"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="0 -45 90" position="0.75 0 -0.75" height="2.1213"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="0 45 90" position="-0.75 0 -0.75" height="2.1213"></a-cylinder>
+					<a-cylinder mixin="ci" rotation="0 -45 90" position="-0.75 0 0.75" height="2.1213"></a-cylinder>
+				</a-entity>
+				
+				<!--cubo -->
+				<a-entity position="0 -1.5 0">
+					<a-entity id="baixo">
+						<a-entity rotation="0 0 90">
+							<a-cylinder mixin="arestas s4_1" ></a-cylinder>
+						</a-entity>
+						<a-entity rotation="0 90 90">
+							<a-cylinder mixin="arestas s4_1"></a-cylinder>
+						</a-entity>
+						<a-entity rotation="0 180 90">
+							<a-cylinder mixin="arestas s4_1"></a-cylinder>
+						</a-entity>
+						<a-entity rotation="0 270 90">
+							<a-cylinder mixin="arestas s4_1"></a-cylinder>
+						</a-entity>
+						<a-entity rotation="0 45 90">
+							<a-cylinder mixin="diagonal"></a-cylinder>
+						</a-entity>
+						<a-entity rotation="0 -45 90">
+							<a-cylinder mixin="diagonal"></a-cylinder>
+						</a-entity>
+						<a-entity position="0 3 0">
+							<a-entity rotation="0 45 90">
+								<a-cylinder mixin="diagonal"></a-cylinder>
+							</a-entity>
+							<a-entity rotation="0 -45 90">
+								<a-cylinder mixin="diagonal"></a-cylinder>
+							</a-entity>
+						</a-entity>
+						<a-entity mixin="s4_3">
+						<a-entity rotation="90 0 0">
+							<a-entity mixin="s4_3">
+								<a-entity rotation="0 90 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 180 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 270 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 45 90">
+										<a-cylinder mixin="diagonal"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 -45 90">
+										<a-cylinder mixin="diagonal"></a-cylinder>
+									</a-entity>
+								</a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity mixin="s4_3">
+							<a-entity rotation="90 90 0">
+							<a-entity mixin="s4_3">
+									<a-entity rotation="0 90 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 180 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 270 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 45 90">
+										<a-cylinder mixin="diagonal"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 -45 90">
+										<a-cylinder mixin="diagonal"></a-cylinder>
+									</a-entity>
+								</a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity mixin="s4_3">
+							<a-entity rotation="90 180 0">
+								<a-entity mixin="s4_3">
+									<a-entity rotation="0 90 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 180 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 270 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 45 90">
+										<a-cylinder mixin="diagonal"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 -45 90">
+										<a-cylinder mixin="diagonal"></a-cylinder>
+									</a-entity>
+								</a-entity>
+							</a-entity>
+						</a-entity>
+						<a-entity mixin="s4_3">
+							<a-entity rotation="90 270 0">
+								<a-entity mixin="s4_3">
+									<a-entity rotation="0 90 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 180 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 270 90">
+										<a-cylinder mixin="arestas s4_1"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 45 90">
+										<a-cylinder mixin="diagonal"></a-cylinder>
+									</a-entity>
+									<a-entity rotation="0 -45 90">
+										<a-cylinder mixin="diagonal"></a-cylinder>
+									</a-entity>
+								</a-entity>
+							</a-entity>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				<a-sphere mixin="esfera" position="1.5 1.5 1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="1.5 -1.5 1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="1.5 -1.5 -1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="1.5 1.5 -1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="-1.5 1.5 1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="-1.5 -1.5 1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="-1.5 -1.5 -1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="-1.5 1.5 -1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="0 0 1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="1.5 0 0"></a-sphere>
+				<a-sphere mixin="esfera" position="0 0 -1.5"></a-sphere>
+				<a-sphere mixin="esfera" position="-1.5 0 0"></a-sphere>
+				<a-sphere mixin="esfera" position="0 1.5 0"></a-sphere>
+				<a-sphere mixin="esfera" position="0 -1.5 0"></a-sphere>
+				<a-sphere mixin="esfera"></a-sphere>
+			</a-entity>
+			
+			<a-entity id="nivel0">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="1.851 1.851 1.8511" mixin="ar"></a-entity>
+						<a-entity scale="1.85 1.85 1.85" mixin="fc"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Concave Dodecahedron"></a-text>
+			</a-entity>
+				
+			<a-entity id="nivel1" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="1.251 1.251 1.251" mixin="ar1"></a-entity>
+						<a-entity scale="1.25 1.25 1.25" mixin="fc1"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Cubitruncated Cuboctahedron"></a-text>
+			</a-entity>
+				
+			<a-entity id="nivel2" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="0.371 0.371 0.371" mixin="ar2"></a-entity>
+						<a-entity scale="0.37 0.37 0.37" mixin="fc2"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Cube kites"></a-text>
+			</a-entity>
+				
+			<a-entity id="nivel3" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="2.121 2.121 2.121" mixin="ar3"></a-entity>
+						<a-entity scale="2.12 2.12 2.12" mixin="fc3"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Cubohemioctahedron"></a-text>
+			</a-entity>
+				
+			<a-entity id="nivel4" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="3.001 3.001 3.001" mixin="ar4"></a-entity>
+						<a-entity scale="3 3 3" mixin="fc4"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Ditrigonal Dodecadodecahedron"></a-text>
+			</a-entity>
+				
+			<a-entity id="nivel5" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="0.431 0.431 0.431" mixin="ar5"></a-entity>
+						<a-entity scale="0.43 0.43 0.43" mixin="fc5"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Dodecahedron kites"></a-text>
+			</a-entity>
+				
+			<a-entity id="nivel6" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="2.431 2.431 2.431" mixin="ar6"></a-entity>
+						<a-entity scale="2.43 2.43 2.43" mixin="fc6"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Dodecadodecahedron"></a-text>
+			</a-entity>
+			
+			<a-entity id="nivel7" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="1.501 1.501 1.501" mixin="ar7"></a-entity>
+						<a-entity scale="1.5 1.5 1.5" mixin="fc7"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Escher solid"></a-text>
+			</a-entity>
+		
+			<a-entity id="nivel8" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="1.801 1.801 1.801" mixin="ar8"></a-entity>
+						<a-entity scale="1.8 1.8 1.8" mixin="fc8"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Escher solid dual"></a-text>
+			</a-entity>
+		
+			<a-entity id="nivel9" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="3.002 3.002 3.002" mixin="ar9"></a-entity>
+						<a-entity scale="3 3 3" mixin="fc9"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Great Cubicuboctahedron"></a-text>
+			</a-entity>
+			
+			<a-entity id="nivel10" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="2.241 2.241 2.241" mixin="ar10"></a-entity>
+						<a-entity scale="2.24 2.24 2.24" mixin="fc10"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Great Dirhombicosidodecahedron"></a-text>
+			</a-entity>
+		
+			<a-entity id="nivel11" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="1.061 1.061 1.061" mixin="ar11"></a-entity>
+						<a-entity scale="1.06 1.06 1.06" mixin="fc11"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Great Disdyakis Dodecahedron"></a-text>
+			</a-entity>
+		
+			<a-entity id="nivel12" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="2.181 2.181 2.181" mixin="ar12"></a-entity>
+						<a-entity scale="2.18 2.18 2.18" mixin="fc12"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Great Ditrigonal Dodecicosidodecahedron"></a-text>
+			</a-entity>
+		
+			<a-entity id="nivel13" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="3.002 3.002 3.002" mixin="ar13"></a-entity>
+						<a-entity scale="3 3 3" mixin="fc13"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Great Ditrigonal Icosidodecahedron"></a-text>
+			</a-entity>
+		
+			<a-entity id="nivel14" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="3.442 3.442 3.442" mixin="ar14"></a-entity>
+						<a-entity scale="3.44 3.44 3.44" mixin="fc14"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Great Dodecahedron"></a-text>
+			</a-entity>
+		
+			<a-entity id="nivel15" visible="false">
+				<a-entity rotation="35 0 45" animation="property: rotation; from: 35 0 45; to: 35 360 45; loop: true; dur: 60000; dir: alternate; delay: 15000;">
+					<a-entity>
+						<a-entity scale="2.431 2.431 2.431" mixin="ar15"></a-entity>
+						<a-entity scale="2.43 2.43 2.43" mixin="fc15"></a-entity>
+					</a-entity>
+				</a-entity>
+				<a-text mixin="texto" value="Great Dodecahemicosahedron"></a-text>
+			</a-entity>
+
+		</a-entity>
+			
+		<a-video src="vr/salas/videos/video.mp4" position="2.055 1 1.16" rotation="0 270 0" depth="0.01" height="1.5" width="2.5"></a-video>
+		<a-box position="2.08 1 1.16" rotation="0 270 0" depth="0.03" height="1.8" width="2.9" src="../imagens/textura.jpg" material="repeat:5 2" static-body></a-box>		
+		<!--<a-cylinder mixin="botao2" class="botao" position="2.06 1.5 -0.7" onclick="fl='sala1.htm', window.open(fl, '_self');" radius="0.3" material="opacity: 0.5;" color="forestgreen" rotation="-90 270 0"></a-cylinder>
+		<a-text value="Previous room" text="align:center;" position="2.06 1.95 -0.7" width="2" rotation="0 270 0"></a-text>
+		<a-text value="Sala anterior" text="align:center;" position="2.06 1.85 -0.7" width="2" rotation="0 270 0"></a-text>-->
+		<a-cylinder mixin="botao2" class="botao" position="2.06 0.65 -0.7" onclick="sairVR()" radius="0.3" material="opacity: 0.5;" color="coral" rotation="-90 270 0"></a-cylinder>
+		<a-text value="Sair do modo imersivo" text="align:center;" position="2.06 1 -0.7" width="2" rotation="0 270 0"></a-text>
+		<a-text value="Exit immersive mode" text="align:center;" position="2.06 1.1 -0.7" width="2" rotation="0 270 0"></a-text>
+		
+		<a-text value="Youtube: @paulohscwb" position="2.06 0.18 1.5" width="2" rotation="0 270 0"></a-text>
+		<a-text value="imagem panoramica: Sergej Majboroda" position="-2 0.18 1.5" width="2.3" rotation="0 90 0"></a-text>
+
+        <a-light type="ambient" color="white" intensity="0.5"></a-light>
+		<a-light type="directional" color="white" light="castShadow:true; shadowBias: -0.0001;" intensity="0.75" position="-3 2 1"></a-light>
+		<a-light type="directional" color="white" light="castShadow:true; shadowBias: -0.0001;" intensity="0.75" position="3 -2 1"></a-light>
+		<a-sky src="https://paulohscwb.github.io/SacredGeometry/imagens/toy.jpg"></a-sky> <!--geometry="phiStart: 95;"-->
+    </a-scene>
+  </body>
+</html>

@@ -10,9 +10,9 @@
 		<option disabled selected>Mais símbolos:</option>
 		<option value="../../catalan/pt-br/">Poliedros de Catalan</option>
 		<option disabled value="../../archimedes/pt-br/">Poliedros de Arquimedes</option>
+		<option value="../../nonconvex/pt-br/">Poliedros não convexos 1</option>
 		<!--<option value="../../biscribed/pt-br/">Poliedros biscritos</option>
 		<option value="../../joined/pt-br/">Cascos convexos de Arquimedes e de Catalan</option>
-		<option value="../../nonconvex/pt-br/">Poliedros não convexos 1</option>
 		<option value="../../nonconvex2/pt-br/">Poliedros não convexos 2</option>
 		<option value="../../propellor/pt-br/">Poliedros de hélice</option>
 		<option value="../../toroids/pt-br/">Toroides poliédricos</option>-->
@@ -32,7 +32,7 @@ function urlHandler(value) {
 <hr>
  <h3 align="center">Sala imersiva</h3>
   <div class="embed-container"><iframe width="100%" src="../sala.htm" title="Sala Imersiva dos poliedros de Arquimedes" frameborder="0" loading="lazy"></iframe></div>
-  <p align="center"><img align="middle" src="../vr/salas/videos/archimedes.gif" style="max-width: 47%; border-radius:5px; margin-right:10px" loading="lazy" alt="VR immersive room to Archimedes polyhedra"/><a href="../sala.htm" target="_blank">&#x1f517; room link</a></p> 
+  <p align="center"><img align="middle" src="../vr/salas/videos/archimedes.gif" style="max-width: 47%; border-radius:5px; margin-right:10px" loading="lazy" alt="VR immersive room to Archimedes polyhedra"/><a href="../sala.htm" target="_blank">&#x1f517; link da sala</a></p> 
   <hr>
   <h3 id="ra" align="center">Realidade Aumentada</h3>
   Para visualizar os símbolos da Geometria Sagrada em RA, visite as páginas indicadas nos modelos 3D dos sólidos utilizando qualquer navegador com um dispositivo de webcam (smartphone, tablet ou notebook).

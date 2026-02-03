@@ -10,9 +10,9 @@
 		<option disabled selected value>More symbols:</option>
 		<option value="../catalan/">Catalan polyhedra</option>
 		<option disabled value="../archimedes/">Archimedean polyhedra</option>
+		<option value="../nonconvex/">Nonconvex polyhedra 1</option>
 		<!--<option value="../biscribed/">Biscribed polyhedr</option>
 		<option value="../joined/">Archimedean and Catalan convex hulls</option>
-		<option value="../nonconvex/">Nonconvex polyhedra 1</option>
 		<option value="../nonconvex2/">Nonconvex polyhedra 2</option>
 		<option value="../propellor/">Propellor polyhedra</option>
 		<option value="../toroids/">Polyhedral toroids</option>-->
