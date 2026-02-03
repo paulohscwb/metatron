@@ -38,7 +38,7 @@ function urlHandler(value) {
   <h3 id="ra" align="center">Realidade Aumentada</h3>
   Para visualizar os símbolos da Geometria Sagrada em RA, visite as páginas indicadas nos modelos 3D dos sólidos utilizando qualquer navegador com um dispositivo de webcam (smartphone, tablet ou notebook).
 <br>O acesso às páginas de RV é feito clicando no círculo azul que aparece em cima de cada marcador.
-<p align="center"><img style="border-radius:7px;" alt="Realidade Aumentada do símbolo Cubo de Metatron" src="../ar/example.png" width="85%"></p>
+<p align="center"><img style="border-radius:7px;" alt="Realidade Aumentada do símbolo Cubo de Metatron" src="../ar/example.gif" width="85%"></p>
 <hr>
 <h3 id="m3d" align="center">Modelos 3D</h3>
 <!--<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxVPJITr-G8ErteKw8a-iN7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->

@@ -38,7 +38,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
   <h3 id="ra" align="center">Augmented Reality</h3>
   To view Sacred Geometry symbols in AR, simply visit the pages indicated in the 3D solid models using any browser with a webcam device (smartphone, tablet or notebook).
 <br>Access to the VR pages is done by clicking on the blue circle that appears on top of the marker.
-<p align="center"><img style="border-radius:7px;" alt="Augmented Reality to Metatron's cube" src="ar/example.png" width="85%"></p>
+<p align="center"><img style="border-radius:7px;" alt="Augmented Reality to Metatron's cube" src="ar/example.gif" width="85%"></p>
 <hr>
 <h3 id="m3d" align="center">3D models</h3>
 <!--<iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxVPJITr-G8ErteKw8a-iN7x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
