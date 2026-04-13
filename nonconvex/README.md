@@ -30,7 +30,7 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
 <br>This work shows nonconvex polyhedra inscribed in the symbol of Metatron's cube, with views that can be accessed with Augmented Reality resources and also in immersive Virtual Reality rooms.
 <p align="center"><a href="#ra">Augmented Reality</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="#m3d">3D Models</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="../">Home</a></p>
   <hr>
- <h3 align="center">Immersive room</h3>
+ <h3 align="center">Immersive rooms</h3>
   <div class="embed-container"><iframe width="100%" src="sala1.htm" title="Sala Imersiva dos poliedros não convexos" frameborder="0" loading="lazy"></iframe></div>
   <p align="center"><img src="vr/salas/videos/metatron_nonconvex.gif" style="max-width: 85%; border-radius:5px;" loading="lazy" alt="Sala Imersiva de RV dos poliedros não convexos"/></p>
   <p align="center"><a href="sala1.htm" target="_blank">&#x1f517; room 1</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="sala2.htm" target="_blank">&#x1f517; room 2</a></p> 

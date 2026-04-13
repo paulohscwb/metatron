@@ -30,9 +30,10 @@ function urlHandler(value) {
 <br>Este trabalho mostra poliedros de Arquimedes inscritos ou circunscritos no símbolo Cubo de Metatron, com as visualizações que podem ser acessadas com os recursos de Realidade Aumentada e também em salas imersivas de Realidade Virtual.
  <p align="center"><a href="#ra">Realidade Aumentada</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="#m3d">Modelos 3D</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="../../pt-br/">Página Inicial</a></p>
 <hr>
- <h3 align="center">Sala imersiva</h3>
+ <h3 align="center">Salas imersivas</h3>
   <div class="embed-container"><iframe width="100%" src="../sala.htm" title="Sala Imersiva dos poliedros de Arquimedes" frameborder="0" loading="lazy"></iframe></div>
-  <p align="center"><img align="middle" src="../vr/salas/videos/archimedes.gif" style="max-width: 47%; border-radius:5px; margin-right:10px" loading="lazy" alt="VR immersive room to Archimedes polyhedra"/><a href="../sala.htm" target="_blank">&#x1f517; link da sala</a></p> 
+  <p align="center"><img align="middle" src="../vr/salas/videos/archimedes.gif" style="max-width: 47%; border-radius:5px; margin-right:10px" loading="lazy" alt="VR immersive room to Archimedes polyhedra"/></p> 
+  <p align="center"><a href="../sala.htm" target="_blank">&#x1f517; sala 1</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="../sala1.htm" target="_blank">&#x1f517; sala 2</a></p> 
   <hr>
   <h3 id="ra" align="center">Realidade Aumentada</h3>
   Para visualizar os símbolos da Geometria Sagrada em RA, visite as páginas indicadas nos modelos 3D dos sólidos utilizando qualquer navegador com um dispositivo de webcam (smartphone, tablet ou notebook).
@@ -41,6 +42,7 @@ function urlHandler(value) {
 <hr>
 <h3 id="m3d" align="center">Modelos 3D</h3>
 <iframe width="560" height="315" style="max-width:100%" src="https://www.youtube.com/embed/videoseries?list=PLy0I_lGW8HxXAd5K8VedQr-CtskDLmAtZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<h4>1. Cuboctaedro</h4>
 <a href="../vr/Cuboctahedron.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/50A.png" class="foto" alt="Metatron - Cuboctaedro"></a><img src="../ar/50.png" class="qr">
  <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um cuboctaedro pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
@@ -99,12 +101,80 @@ function urlHandler(value) {
  <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um tetraedro truncado pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<p class="topop"><a href="#p1" class="topo">voltar ao topo</a></p>
 <hr>
 <h4>11. Tetraedro Truncado Estrelado</h4>
 <a href="../vr/TruncatedTetrahedronStar.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/60A.png" class="foto" alt="Metatron - Tetraedro Truncado Estrelado"></a><img src="../ar/60.png" class="qr">
  <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um tetraedro truncado estrelado pode ser inscrito no símbolo Cubo de Metatron.
  <br><br><br>
 <a href="../ra.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>12. Cuboctaedro de pipas</h4>
+<a href="../vr/CuboctahedronK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/61A.png" class="foto" alt="Metatron - Cuboctaedro de pipas"></a><img src="../ar/61.png" class="qr">
+ <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um cuboctaedro de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>13. Icosidodecaedro de pipas</h4>
+<a href="../vr/IcosidodecahedronK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/62A.png" class="foto" alt="Metatron - Icosidodecaedro de pipas"></a><img src="../ar/62.png" class="qr">
+ <br><br><br>O Cubo de Metatron é considerado uma variante geométrica do símbolo do Fruto da Vida que é, por sua vez, derivado do símbolo da Flor da Vida. Um icosidodecaedro de pipas pode ser circunscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>14. Rombicuboctaedro de pipas</h4>
+<a href="../vr/RhombicuboctahedronK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/63A.png" class="foto" alt="Metatron - Rombicuboctaedro de pipas"></a><img src="../ar/63.png" class="qr">
+ <br><br><br>O Cubo de Metatron é um poderoso símbolo da Geometria Sagrada, pois acredita-se que este símbolo contém todos os padrões da criação. Um rombicuboctaedro de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>15. Cubo Snub de pipas</h4>
+<a href="../vr/SnubCubeK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/64A.png" class="foto" alt="Metatron - Cubo Snub de pipas"></a><img src="../ar/64.png" class="qr">
+ <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um cubo snub de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>16. Cubo Truncado de pipas</h4>
+<a href="../vr/TruncatedCubeK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/65A.png" class="foto" alt="Metatron - Cubo Truncado de pipas"></a><img src="../ar/65.png" class="qr">
+ <br><br><br>O Cubo de Metatron é considerado uma variante geométrica do símbolo do Fruto da Vida que é, por sua vez, derivado do símbolo da Flor da Vida. Um cubo truncado de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>17. Cuboctaedro Truncado de pipas</h4>
+<a href="../vr/TruncatedCuboctahedronK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/66A.png" class="foto" alt="Metatron - Cuboctaedro Truncado de pipas"></a><img src="../ar/66.png" class="qr">
+ <br><br><br>O Cubo de Metatron é um poderoso símbolo da Geometria Sagrada, pois acredita-se que este símbolo contém todos os padrões da criação. Um cuboctaedro truncado de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>18. Dodecaedro Truncado de pipas</h4>
+<a href="../vr/TruncatedDodecahedronK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/67A.png" class="foto" alt="Metatron - Dodecaedro Truncado de pipas"></a><img src="../ar/67.png" class="qr">
+ <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um dodecaedro truncado de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>19. Icosaedro Truncado de pipas</h4>
+<a href="../vr/TruncatedIcosahedronK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/68A.png" class="foto" alt="Metatron - Icosaedro Truncado de pipas"></a><img src="../ar/68.png" class="qr">
+ <br><br><br>O Cubo de Metatron é considerado uma variante geométrica do símbolo do Fruto da Vida que é, por sua vez, derivado do símbolo da Flor da Vida. Um icosaedro truncado de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>20. Octaedro Truncado de pipas</h4>
+<a href="../vr/TruncatedOctahedronK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/69A.png" class="foto" alt="Metatron - Octaedro Truncado de pipas"></a><img src="../ar/69.png" class="qr">
+ <br><br><br>O Cubo de Metatron é um poderoso símbolo da Geometria Sagrada, pois acredita-se que este símbolo contém todos os padrões da criação. Um Octaedro Truncado de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<p class="topop"><a href="#p1" class="topo">voltar ao topo</a></p>
+<hr>
+<h4>21. Tetraedro Truncado de pipas</h4>
+<a href="../vr/TruncatedTetrahedronK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/70A.png" class="foto" alt="Metatron - Tetraedro Truncado de pipas"></a><img src="../ar/70.png" class="qr">
+ <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um tetraedro truncado de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
+<hr>
+<h4>22. Tetraedro Truncado Estrelado de pipas</h4>
+<a href="../vr/TruncatedTetrahedronStarK.htm" target="_blank" title="modelo 3D" class="fotoA"><img src="../ar/71A.png" class="foto" alt="Metatron - Tetraedro Truncado Estrelado de pipas"></a><img src="../ar/71.png" class="qr">
+ <br><br><br>O Cubo de Metatron é o nome dado a uma figura geométrica bidimensional complexa feita com 13 círculos do mesmo tamanho, com linhas que se estendem do centro de cada círculo ao centro de todos os outros doze círculos. Um tetraedro truncado estrelado de pipas pode ser inscrito no símbolo Cubo de Metatron.
+ <br><br><br>
+<a href="../ra1.html" class="raAR" title="Realidade aumentada" target="_blank"></a>
 <p class="topop"><a href="#p1" class="topo">voltar ao topo</a></p>
 <hr>
 

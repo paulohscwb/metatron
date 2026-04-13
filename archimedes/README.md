@@ -30,9 +30,10 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
 <br>This work shows Archimedean polyhedra inscribed or circumscribed in the symbol of Metatron's cube, with views that can be accessed with Augmented Reality resources and also in immersive Virtual Reality rooms.
 <p align="center"><a href="#ra">Augmented Reality</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="#m3d">3D Models</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="../">Home</a></p>
   <hr>
- <h3 align="center">Immersive room</h3>
+ <h3 align="center">Immersive rooms</h3>
   <div class="embed-container"><iframe width="100%" src="sala.htm" title="Sala Imersiva dos poliedros de Arquimedes" frameborder="0" loading="lazy"></iframe></div>
-  <p align="center"><img align="middle" src="vr/salas/videos/archimedes.gif" style="max-width: 47%; border-radius:5px; margin-right:10px" loading="lazy" alt="Sala Imersiva de RV dos poliedros de Arquimedes"/><a href="sala.htm" target="_blank">&#x1f517; room link</a></p> 
+  <p align="center"><img align="middle" src="vr/salas/videos/archimedes.gif" style="max-width: 85%; border-radius:5px; margin-right:10px" loading="lazy" alt="Sala Imersiva de RV dos poliedros de Arquimedes"/></p>
+  <p align="center"><a href="sala.htm" target="_blank">&#x1f517; room 1</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="sala1.htm" target="_blank">&#x1f517; room 2</a></p> 
   <hr>
   <h3 id="ra" align="center">Augmented Reality</h3>
   To view Sacred Geometry symbols in AR, simply visit the pages indicated in the 3D solid models using any browser with a webcam device (smartphone, tablet or notebook).
@@ -100,12 +101,80 @@ Metatron's Cube is a complex structure of Sacred Geometry, derived from the stru
  <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A truncated tetrahedron can be inscribed in Metatron's cube symbol.
  <br><br>
  <a href="ra.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <p class="topop"><a href="#p1" class="topo">back to top</a></p>
  <hr>
 <h4>11. Truncated Stellated Tetrahedron</h4>
 <a href="vr/TruncatedTetrahedronStar.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/60A.png" class="foto" alt="Metatron - Truncated Stellated Tetrahedron"></a><img src="ar/60.png" class="qr">
  <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A truncated stellated tetrahedron can be inscribed in Metatron's cube symbol.
  <br><br>
  <a href="ra.html" class="raAR" title="Augmented reality" target="_blank"></a>
+<hr>
+<h4>12. Cuboctahedron kites</h4>
+<a href="vr/CuboctahedronK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/61A.png" class="foto" alt="Metatron - Cuboctahedron kites"></a><img src="ar/61.png" class="qr">
+ <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A cuboctahedron kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+  <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <hr>
+<h4>13. Icosidodecahedron kites</h4>
+<a href="vr/IcosidodecahedronK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/62A.png" class="foto" alt="Metatron - Icosidodecahedron kites"></a><img src="ar/62.png" class="qr">
+ <br><br><br>Metatron's Cube is considered a geometric variation of the Fruit of Life symbol, which is in turn derived from the Flower of Life symbol. An icosidodecahedron kites can be circumscribed in Metatron's cube symbol.
+ <br><br>
+ <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+<hr>
+<h4>14. Rhombicuboctahedron kites</h4>
+<a href="vr/RhombicuboctahedronK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/63A.png" class="foto" alt="Metatron - Rhombicuboctahedron kites"></a><img src="ar/63.png" class="qr">
+ <br><br><br>Metatron's Cube is a powerful symbol of Sacred Geometry, as this symbol is believed to contain all the patterns of creation. A rhombicuboctahedron kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+ <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <hr>
+<h4>15. Snub Cube kites</h4>
+<a href="vr/SnubCubeK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/64A.png" class="foto" alt="Metatron - Snub Cube kites"></a><img src="ar/64.png" class="qr">
+ <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A snub cube kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+ <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+<hr>
+<h4>16. Truncated Cube kites</h4>
+<a href="vr/TruncatedCubeK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/65A.png" class="foto" alt="Metatron - Truncated Cube kites"></a><img src="ar/65.png" class="qr">
+ <br><br><br>Metatron's Cube is considered a geometric variation of the Fruit of Life symbol, which is in turn derived from the Flower of Life symbol. A truncated cube kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+  <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <hr>
+<h4>17. Truncated Cuboctahedron kites</h4>
+<a href="vr/TruncatedCuboctahedronK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/66A.png" class="foto" alt="Metatron - Truncated Cuboctahedron kites"></a><img src="ar/66.png" class="qr">
+ <br><br><br>Metatron's Cube is a powerful symbol of Sacred Geometry, as this symbol is believed to contain all the patterns of creation. A truncated cuboctahedron kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+ <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <hr>
+<h4>18. Truncated Dodecahedron kites</h4>
+<a href="vr/TruncatedDodecahedronK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/67A.png" class="foto" alt="Metatron - Truncated Dodecahedron kites"></a><img src="ar/67.png" class="qr">
+ <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A truncated dodecahedron kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+  <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <hr>
+<h4>19. Truncated Icosahedron kites</h4>
+<a href="vr/TruncatedIcosahedronK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/68A.png" class="foto" alt="Metatron - Truncated Icosahedron kites"></a><img src="ar/68.png" class="qr">
+ <br><br><br>Metatron's Cube is considered a geometric variation of the Fruit of Life symbol, which is in turn derived from the Flower of Life symbol. A truncated icosahedron kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+ <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <hr>
+<h4>20. Truncated Octahedron kites</h4>
+<a href="vr/TruncatedOctahedronK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/69A.png" class="foto" alt="Metatron - Truncated Octahedron kites"></a><img src="ar/69.png" class="qr">
+ <br><br><br>Metatron's Cube is a powerful symbol of Sacred Geometry, as this symbol is believed to contain all the patterns of creation. A truncated octahedron kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+ <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <p class="topop"><a href="#p1" class="topo">back to top</a></p>
+ <hr>
+<h4>21. Truncated Tetrahedron kites</h4>
+<a href="vr/TruncatedTetrahedronK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/70A.png" class="foto" alt="Metatron - Truncated Tetrahedron"></a><img src="ar/70.png" class="qr">
+ <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A truncated tetrahedron kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+ <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
+ <hr>
+<h4>22. Truncated Stellated Tetrahedron kites</h4>
+<a href="vr/TruncatedTetrahedronStarK.htm" target="_blank" title="3D model" class="fotoA"><img src="ar/71A.png" class="foto" alt="Metatron - Truncated Stellated Tetrahedron kites"></a><img src="ar/71.png" class="qr">
+ <br><br><br>Metatron's Cube is the name given to a complex two-dimensional geometric figure made of 13 circles of equal size, with lines extending from the center of each circle to the center of all twelve other circles. A truncated stellated tetrahedron kites can be inscribed in Metatron's cube symbol.
+ <br><br>
+ <a href="ra1.html" class="raAR" title="Augmented reality" target="_blank"></a>
  <p class="topop"><a href="#p1" class="topo">back to top</a></p>
 <hr>
 

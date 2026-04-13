@@ -30,7 +30,7 @@ function urlHandler(value) {
 <br>Este trabalho mostra poliedros não convexos inscritos no símbolo Cubo de Metatron, com as visualizações que podem ser acessadas com os recursos de Realidade Aumentada e também em salas imersivas de Realidade Virtual.
  <p align="center"><a href="#ra">Realidade Aumentada</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="#m3d">Modelos 3D</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="../../pt-br/">Página Inicial</a></p>
 <hr>
- <h3 align="center">Sala imersiva</h3>
+ <h3 align="center">Salas imersivas</h3>
   <div class="embed-container"><iframe width="100%" src="../sala1.htm" title="Sala Imersiva dos poliedros não convexos" frameborder="0" loading="lazy"></iframe></div>
   <p align="center"><img src="../vr/salas/videos/metatron_nonconvex.gif" style="max-width: 85%; border-radius:5px;" loading="lazy" alt="VR immersive room to non convex polyhedra"/></p> 
   <p align="center"><a href="../sala1.htm" target="_blank">&#x1f517; sala 1</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span><a href="../sala2.htm" target="_blank">&#x1f517; sala 2</a></p> 
